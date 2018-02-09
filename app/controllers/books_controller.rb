@@ -8,11 +8,11 @@ before_action :find_book, only: [:show, :edit, :update,:destroy]
 	end
 
 	def new
-		@book=Book.new
+		@book = current_user.books.build
 	end
 
 	def create
-		@book=Book.new(book_params)
+		@book = current_user.books.create(book_params)
 		if @book.save
 			redirect_to root_path
 		else
@@ -39,11 +39,11 @@ before_action :find_book, only: [:show, :edit, :update,:destroy]
 	private
 
 	def book_params
-		params.require(:book).permit(:title,:description,:author)
+		params.require(:book).permit(:title,:description,:author, :user_id)
 	end
 
 	def find_book
-		@book=Book.find(params[:id,])
+		@book=Book.find(params[:id])
 	end
 
 

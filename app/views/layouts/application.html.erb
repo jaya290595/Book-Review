@@ -25,12 +25,26 @@
           <% end %>
 
         </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
+             <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+            <% Category.all.each do |category| %>
+               <li>
+                 <%= link_to category.name, books_path(category.id), class: "link" %>
+               </li>
+            <% end %>
+
+            </ul>
+          </li>
           	 
-          <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
            <li><%= link_to "Add Book", new_book_path %></li>
             <% end %>
-      	
+      	  </div>
         </ul>
       </div>  
 

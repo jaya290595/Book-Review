@@ -1,3 +1,4 @@
 class Book < ApplicationRecord
-	has_many :user
+	belongs_to :user
+	belongs_to :category
 end

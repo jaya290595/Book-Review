@@ -19,7 +19,7 @@ development:
     # For details on connection pooling, see Rails configuration guide
     # http://guides.rubyonrails.org/configuring.html#database-pooling
     pool: 5
-    host: localhost
+    host: localhost 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,5 +31,3 @@ test:
 production:
   <<: *default
   database: book-review_production
-  username: book-review
-  password: <%= ENV['BOOK-REVIEW_DATABASE_PASSWORD'] %>

@@ -25,7 +25,7 @@ before_action :authenticate_user!, only: [:new, :edit]
   end
 
   def create
-    debugger
+  
     @book = current_user.books.create(book_params)
     @book.category_id = params[:category_id] 
 

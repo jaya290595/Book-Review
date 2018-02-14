@@ -15,7 +15,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4', '>= 4.4.1'
-gem 'paperclip', '~> 5.2', '>= 5.2.1'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.3'
+gem 'cloudinary', '~> 1.8', '>= 1.8.3'
+
+
 
 
 group :development, :test do
@@ -30,8 +34,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-gem 'pg'
+gem 'sqlite3', '~> 1.3', '>= 1.3.13'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do

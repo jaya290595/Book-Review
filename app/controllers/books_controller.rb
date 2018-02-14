@@ -25,6 +25,7 @@ before_action :authenticate_user!, only: [:new, :edit]
   end
 
   def create
+    debugger
     @book = current_user.books.create(book_params)
     @book.category_id = params[:category_id] 
 
@@ -57,7 +58,7 @@ before_action :authenticate_user!, only: [:new, :edit]
   private
 
   def book_params
-    params.require(:book).permit(:title,:description,:author, :user_id, :category_id, :book_img)
+    params.require(:book).permit(:title,:description,:author, :user_id, :category_id, :image)
   end
 
   def find_book

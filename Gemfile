@@ -18,6 +18,7 @@ gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3'
 gem 'cloudinary', '~> 1.8', '>= 1.8.3'
+gem 'activeadmin'
 
 
 

@@ -11,3 +11,4 @@ Category.create(name: 'Education')
 Category.create(name: 'Biography')
 
 
+AdminUser.create!(email: 'admin1@example.com', password: 'ppassword', password_confirmation: 'ppassword') if Rails.env.development?
